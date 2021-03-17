@@ -1,2 +1,2 @@
 # graphql-me-experiments
-Graphql - Mongo - ExpressJs experiments
+Graphql - ExpressJs - MongoDB -  experiments
