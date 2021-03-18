@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
 });
 
 app.use('/graphql', graphqlHTTP({
-  /*rootValue: {
+  rootValue: {
     hello: () => 'Hello world GRAPHQL! USE'
-  },*/
+  },
   graphiql: true,
   schema: schema
 }));
