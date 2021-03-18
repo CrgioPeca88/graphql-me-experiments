@@ -9,4 +9,4 @@ After cloning, go to the root folder and run:
 ## Compiling Files and Run them.
 - `npm install`
 - `npm run build`
-- `npm build-serve`
+- `npm run build-serve`
