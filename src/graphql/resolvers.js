@@ -1,5 +1,5 @@
 // Assets
-import { tasks } from '../tasks';
+import { tasksHandler } from '../tasks';
 
 export const resolvers = {
     Query: {
@@ -7,7 +7,12 @@ export const resolvers = {
         return `Hi ${args.name}, GRAPHQL greet you!`;
       },
       getTasks: () => {
-        return tasks;
+        return tasksHandler.getTasks();
+      }
+    },
+    Mutation: {
+      createTask: (_, { input }) => {
+        return tasksHandler.createTask(input);
       }
     }
 }
