@@ -12,7 +12,7 @@ After cloning, go to the root folder and run:
 - `npm run build-serve`
 
 
-### Queries example to test from GraphiQl: 
+### Queries example to test from GraphiQl:
 ```
 query {
   greet(name: "CrgioPeca88")
@@ -33,6 +33,16 @@ mutation{
   }) {
     _id
     title
+  }
+  createUser(input: {
+    firstname: "Crgio"
+    lastname: "Peca"
+    email: "crgiopeca@graphql.com"
+    nickname: "CrgioPeca88"
+  }) {
+    _id
+    email
+    nickname
   }
 }
 ```

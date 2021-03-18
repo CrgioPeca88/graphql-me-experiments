@@ -11,20 +11,21 @@ console.log('==> Starting NODE server with ExpressJs....');
 console.log('==> Starting connection to MongoDB....');
 
 connectToMongoDB();
-const app = express();
 
+const app = express();
 app.get('/', (req, res) => {
     res.json({
       message: 'Hello world GRAPHQL!'
     })
 });
-
 app.use('/graphql', graphqlHTTP({
   rootValue: {
     hello: () => 'Hello world GRAPHQL! USE'
   },
   graphiql: true,
-  schema: schema
+  schema: schema,
+  context: {
+    messageId: 'context messageId test!'
+  }
 }));
-
 app.listen(3000, () => console.log('==> Server launched on port: 3000'));

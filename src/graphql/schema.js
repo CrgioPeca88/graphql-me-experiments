@@ -11,6 +11,7 @@ const typeDefs = `
   }
   type Mutation {
     createTask(input: _TaskI): _Task
+    createUser(input: _UserI): _User
   }
 
   type _Task {
@@ -20,10 +21,25 @@ const typeDefs = `
     completed: Boolean
   }
 
+  type _User {
+    _id: ID
+    firstname: String
+    lastname: String
+    email: String
+    nickname: String
+  }
+
   input _TaskI {
     title: String!
     description: String!
     completed: Boolean!
+  }
+
+  input _UserI {
+    firstname: String!
+    lastname: String
+    email: String!
+    nickname: String!
   }
 `;
 
