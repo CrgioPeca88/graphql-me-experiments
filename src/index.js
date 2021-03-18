@@ -4,7 +4,7 @@ import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
 
 // Assets
-import schema from './schema';
+import schema from './graphql/schema';
 
 console.log('==> Starting NODE server with ExpressJs....');
 const app = express();

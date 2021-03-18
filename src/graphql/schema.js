@@ -6,7 +6,15 @@ import { resolvers } from './resolvers';
 
 const typeDefs = `
   type Query {
-    hello: String
+    greet(name: String!): String
+    getTasks: [_Task]
+  }
+
+  type _Task {
+    _id: ID
+    title: String
+    description: String
+    completed: Boolean
   }
 `;
 
