@@ -13,8 +13,7 @@ After cloning, go to the root folder and run:
 
 
 ### Query example to test from GraphiQl:
-- ```
-query {
+- `query {
   greet(name: "CrgioPeca88")
   getTasks {
     _id
@@ -23,7 +22,8 @@ query {
     completed
   }
 }
-mutation{
+`
+- `mutation{
   createTask(input: {
     title: "To Sleep"
     description: "To Sleep description ... To Sleep... To Sleep"
@@ -32,5 +32,4 @@ mutation{
     _id
     title
   }
-}
-```
+}`
