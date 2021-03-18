@@ -5,8 +5,12 @@ import { buildSchema } from 'graphql';
 
 // Assets
 import schema from './graphql/schema';
+import { connectToMongoDB } from './mongodb/database-config'
 
 console.log('==> Starting NODE server with ExpressJs....');
+console.log('==> Starting connection to MongoDB....');
+
+connectToMongoDB();
 const app = express();
 
 app.get('/', (req, res) => {
