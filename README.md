@@ -12,8 +12,9 @@ After cloning, go to the root folder and run:
 - `npm run build-serve`
 
 
-### Query example to test from GraphiQl:
-- `query {
+### Queries example to test from GraphiQl: 
+```
+query {
   greet(name: "CrgioPeca88")
   getTasks {
     _id
@@ -22,8 +23,9 @@ After cloning, go to the root folder and run:
     completed
   }
 }
-`
-- `mutation{
+```
+```
+mutation{
   createTask(input: {
     title: "To Sleep"
     description: "To Sleep description ... To Sleep... To Sleep"
@@ -32,4 +34,5 @@ After cloning, go to the root folder and run:
     _id
     title
   }
-}`
+}
+```
