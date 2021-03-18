@@ -5,7 +5,8 @@ export async function connectToMongoDB() {
   try {
     await mongoose.connect('mongodb://localhost/mongodbgql-experiments', {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useFindAndModify: false
     });
     console.log('==> OK, Connected to MongoDB Database!');
   } catch(err) {

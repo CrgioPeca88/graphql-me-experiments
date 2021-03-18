@@ -22,6 +22,13 @@ query {
     description
     completed
   }
+  getUsers{
+    _id
+    firstname
+    lastname
+    nickname
+    email
+  }
 }
 ```
 ```
@@ -41,6 +48,25 @@ mutation{
     nickname: "CrgioPeca88"
   }) {
     _id
+    email
+    nickname
+  }
+  deleteUser(_id: "XxXxXXXxXxXxXx"){
+    _id
+    firstname
+    nickname
+  }
+  updateUser(
+    _id: "XxXxXXXxXxXxXx",
+    input: {
+      firstname: "CrgioU"
+      email: "crgioupdate@graphql.com"
+      nickname: "CrgioPeca88U"
+    }
+  ) {
+    _id
+    firstname
+    lastname
     email
     nickname
   }

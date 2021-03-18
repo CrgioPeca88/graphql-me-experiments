@@ -28,4 +28,4 @@ app.use('/graphql', graphqlHTTP({
     messageId: 'context messageId test!'
   }
 }));
-app.listen(3000, () => console.log('==> Server launched on port: 3000'));
+app.listen(3000, () => console.log('==> OK, Server launched on port: 3000'));

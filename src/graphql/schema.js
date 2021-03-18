@@ -8,10 +8,13 @@ const typeDefs = `
   type Query {
     greet(name: String!): String
     getTasks: [_Task]
+    getUsers: [_User]
   }
   type Mutation {
     createTask(input: _TaskI): _Task
     createUser(input: _UserI): _User
+    deleteUser(_id: ID!): _User
+    updateUser(_id: ID!, input: _UserI): _User
   }
 
   type _Task {
